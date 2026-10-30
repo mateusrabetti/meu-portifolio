@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mateus Rabetti — Portfólio Pessoal</title>
+  <meta name="description" content="Portfólio de Mateus de Souza Silva Rabetti. Projetos em destaque: Block World (3D Voxel Survival), Maria DB e Fitness Dashboard. Desenvolvido com HTML5, CSS3 e JavaScript puro.">
+  <meta name="author" content="Mateus de Souza Silva Rabetti">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mateus Rabetti — Portfólio Pessoal">
+  <meta property="og:description" content="Simples na aparência, complexo nos detalhes. Projetos reais: Block World, Maria DB e Fitness.">
+  <meta property="og:image" content="Assents/projects/block-world/gameplay.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Folha de Estilos Oficial -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Efeitos de Fundo Dinâmicos e Acessíveis -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow"></div>
+  </div>
+  <div id="mouse-spotlight" class="mouse-spotlight" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       1. CABEÇALHO & MENU DE NAVEGAÇÃO
+       ========================================================================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-link" aria-label="Mateus Rabetti - Início">
+        <div class="brand-avatar-badge" aria-hidden="true">MR</div>
+        <div class="brand-name-group">
+          <span class="brand-name">Mateus Rabetti</span>
+          <span class="brand-status">
+            <span class="status-indicator-dot" aria-hidden="true"></span>
+            Disponível para projetos
+          </span>
+        </div>
+      </a>
+
+      <!-- Menu Principal -->
+      <nav class="site-navigation" aria-label="Navegação Principal">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/mateusrabetti" target="_blank" rel="noopener noreferrer" class="btn-nav-github" title="Acessar perfil de Mateus no GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <button type="button" class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =========================================================================
+         2. SEÇÃO HERO — APRESENTAÇÃO INICIAL
+         ========================================================================= -->
+    <section class="section-hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-badge-available">
+            <span class="status-indicator-dot" aria-hidden="true"></span>
+            <span>Portfólio Oficial &bull; Desenvolvedor Web</span>
+          </div>
+
+          <p class="hero-full-name">Mateus de Souza Silva Rabetti</p>
+
+          <h1 class="hero-title">
+            <span class="text-gradient">Simples na aparência,</span><br>
+            <span class="text-accent">complexo nos detalhes.</span>
+          </h1>
+
+          <p class="hero-description">
+            Olá! Sou o Mateus. Crio aplicações interativas e experiências web com código limpo, foco em desempenho nativo e carinho em cada detalhe visual e de usabilidade.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn-primary" id="btn-hero-projects">
+              <span>Conhecer Projetos</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="https://github.com/mateusrabetti" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="btn-hero-github">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor; stroke: none;">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Explorar GitHub</span>
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="hero-highlight-item">
+              <span class="highlight-value">3</span>
+              <span class="highlight-label">Projetos Publicados</span>
+            </div>
+            <div class="hero-highlight-item">
+              <span class="highlight-value">100%</span>
+              <span class="highlight-label">Tecnologias Nativas</span>
+            </div>
+            <div class="hero-highlight-item">
+              <span class="highlight-value">0</span>
+              <span class="highlight-label">Dependências Pesadas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card de Demonstração Visual dos Projetos no Hero -->
+        <div class="hero-visual reveal-on-scroll reveal-delay-2">
+          <div class="hero-card-preview">
+            <div class="hero-card-header">
+              <div class="hero-window-dots" aria-hidden="true">
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+              </div>
+              <span class="hero-window-title">block-world-3d.render</span>
+            </div>
+
+            <div class="hero-media-mosaic">
+              <div class="mosaic-main-image-wrap">
+                <img src="Assents/projects/block-world/gameplay.png" alt="Captura real do jogo 3D Block World desenvolvido por Mateus Rabetti" loading="eager">
+                <div class="mosaic-caption">
+                  <span class="mosaic-caption-title">Block World &bull; Voxel 3D Engine</span>
+                  <span class="mosaic-caption-tag">Three.js</span>
+                </div>
+              </div>
+
+              <div class="mosaic-sub-cards">
+                <a href="#projeto-maria-db" class="sub-card-mini">
+                  <div class="sub-card-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                  </div>
+                  <div class="sub-card-info">
+                    <h4>Maria DB</h4>
+                    <p>Web Showcase</p>
+                  </div>
+                </a>
+
+                <a href="#projeto-fitness" class="sub-card-mini">
+                  <div class="sub-card-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="sub-card-info">
+                    <h4>Fitness</h4>
+                    <p>Dashboard de Saúde</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. SEÇÃO SOBRE MIM
+         ========================================================================= -->
+    <section class="section-about" id="sobre">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Minha Jornada</span>
+          <h2 class="section-title">Construindo interfaces com propósito e personalidade</h2>
+          <p class="section-subtitle">
+            Acredito que um software excelente nasce do equilíbrio entre simplicidade visual, código estruturado e respeito genuíno a quem o utiliza.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-column reveal-on-scroll">
+            <p class="about-lead-paragraph">
+              Meu nome é Mateus de Souza Silva Rabetti. Sou desenvolvedor web focado em criar produtos digitais que funcionem perfeitamente em qualquer dispositivo.
+            </p>
+
+            <p class="about-paragraph">
+              Gosto de entender a fundo como as coisas funcionam por baixo dos panos. Por isso, valorizo construir desde motores 3D interativos em WebGL até interfaces com alta precisão tipográfica e dashboards responsivos, priorizando sempre a velocidade, a acessibilidade e a estética limpa.
+            </p>
+
+            <div class="about-quote-box">
+              <p class="about-quote-text">
+                "Simples na aparência, complexo nos detalhes e com o meu jeitinho."
+              </p>
+              <p class="about-quote-author">&mdash; Mateus Rabetti</p>
+            </div>
+
+            <div class="tech-stack-overview">
+              <h3 style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 12px; margin-top: 16px;">
+                Tecnologias que domino e utilizo
+              </h3>
+              <div class="tech-pills-wrap">
+                <span class="tech-pill">HTML5 Semântico</span>
+                <span class="tech-pill">CSS3 Puro &amp; Responsivo</span>
+                <span class="tech-pill">JavaScript Moderno (ES6+)</span>
+                <span class="tech-pill">Three.js &amp; WebGL 3D</span>
+                <span class="tech-pill">Arquitetura de Componentes</span>
+                <span class="tech-pill">Git &amp; GitHub</span>
+                <span class="tech-pill">Deploy Estático (Vercel)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cards-column reveal-on-scroll reveal-delay-2">
+            <div class="about-pillar-card">
+              <div class="pillar-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Código Limpo &amp; Nativo</h3>
+              <p>
+                Prefiro soluções nativas, leves e sustentáveis a depender de pilhas inchadas de dependências. O resultado são páginas instantâneas e fáceis de manter.
+              </p>
+            </div>
+
+            <div class="about-pillar-card">
+              <div class="pillar-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="12 8 8 12 12 16 16 12 12 8"></polygon>
+                </svg>
+              </div>
+              <h3>Atenção aos Detalhes Visuais</h3>
+              <p>
+                Microinterações intencionais, contraste legível e transições que parecem naturais aos olhos e ao toque, sem excessos ou ornamentos desnecessários.
+              </p>
+            </div>
+
+            <div class="about-pillar-card">
+              <div class="pillar-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3>Responsividade Real</h3>
+              <p>
+                Interfaces construídas desde o início para se adaptarem com elegância tanto a telas de smartphones compactos quanto a monitores ultrawide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SEÇÃO PROJETOS — MEUS TRABALHOS EM DESTAQUE
+         ========================================================================= -->
+    <section class="section-projects" id="projetos">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Trabalhos Selecionados</span>
+          <h2 class="section-title">Meus Projetos Publicados</h2>
+          <p class="section-subtitle">
+            Cada projeto foi construído para resolver um desafio técnico real: desde um simulador voxel 3D em Three.js até páginas conceituais e dashboards mobile.
+          </p>
+        </div>
+
+        <div class="projects-container">
+
+          <!-- -----------------------------------------------------------------
+               PROJETO 1: BLOCK WORLD
+               ----------------------------------------------------------------- -->
+          <article class="project-card reveal-on-scroll" id="projeto-block-world">
+            <div class="project-media-column">
+              <div class="project-image-wrapper">
+                <img src="Assents/projects/block-world/gameplay.png" alt="Captura em jogo do projeto Block World em 3D" loading="lazy">
+
+                <button type="button" class="btn-expand-preview" title="Ampliar visualização">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Ampliar</span>
+                </button>
+
+                <div class="media-view-toggle">
+                  <button type="button" class="view-toggle-btn active" data-src="Assents/projects/block-world/gameplay.png">
+                    🎮 3D Gameplay
+                  </button>
+                  <button type="button" class="view-toggle-btn" data-src="Assents/projects/block-world/preview.png">
+                    📋 Menu &amp; Controles
+                  </button>
+                  <button type="button" class="view-toggle-btn" data-src="Assents/projects/block-world/mobile.png">
+                    📱 Mobile
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content-column">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-number">PROJETO 01</span>
+                  <span class="project-status-badge">Publicado &bull; Vercel</span>
+                </div>
+
+                <h3 class="project-name">Block World</h3>
+
+                <p class="project-description">
+                  Jogo 3D voxel de sobrevivência construído inteiramente com Three.js e JavaScript puro. Apresenta geração de terreno procedural com biomas distintos, árvores, ciclo dinâmico de dia e noite, sistema completo de inventário com receitas de crafting (2x2 na mochila e 3x3 na bancada), fundição em fornalha, física de colisão, gerenciamento de corações de vida e suporte para conexão em rede local (LAN).
+                </p>
+
+                <div class="project-tags">
+                  <span class="tag-item">Three.js</span>
+                  <span class="tag-item">WebGL</span>
+                  <span class="tag-item">JavaScript Puro</span>
+                  <span class="tag-item">Geração Procedural</span>
+                  <span class="tag-item">Física 3D</span>
+                  <span class="tag-item">Multiplayer LAN</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://block-world-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-visit">
+                  <span>Acessar Projeto</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+
+                <a href="https://github.com/mateusrabetti/Block-World" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Repositório</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               PROJETO 2: MARIA DB
+               ----------------------------------------------------------------- -->
+          <article class="project-card reveal-on-scroll" id="projeto-maria-db">
+            <div class="project-media-column">
+              <div class="project-image-wrapper">
+                <img src="Assents/projects/maria-db/preview.png" alt="Captura da página de apresentação do MariaDB desenvolvida por Mateus Rabetti" loading="lazy">
+
+                <button type="button" class="btn-expand-preview" title="Ampliar visualização">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Ampliar</span>
+                </button>
+
+                <div class="media-view-toggle">
+                  <button type="button" class="view-toggle-btn active" data-src="Assents/projects/maria-db/preview.png">
+                    🖥️ Desktop
+                  </button>
+                  <button type="button" class="view-toggle-btn" data-src="Assents/projects/maria-db/full.png">
+                    📜 Visão Geral
+                  </button>
+                  <button type="button" class="view-toggle-btn" data-src="Assents/projects/maria-db/mobile.png">
+                    📱 Mobile
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content-column">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-number">PROJETO 02</span>
+                  <span class="project-status-badge">Publicado &bull; Vercel</span>
+                </div>
+
+                <h3 class="project-name">Maria DB</h3>
+
+                <p class="project-description">
+                  Landing page institucional inspirada na robustez do sistema de banco de dados MariaDB. Construída com hierarquia tipográfica marcante baseada na fonte Plus Jakarta Sans, composições limpas, botões de ação e seções focadas em demonstrar funcionalidades, casos de uso e exemplos práticos para o ecossistema open-source empresarial.
+                </p>
+
+                <div class="project-tags">
+                  <span class="tag-item">HTML5 Semântico</span>
+                  <span class="tag-item">CSS3 Moderno</span>
+                  <span class="tag-item">Plus Jakarta Sans</span>
+                  <span class="tag-item">Layout Fluido</span>
+                  <span class="tag-item">Design System</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://maria-db-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-visit">
+                  <span>Acessar Projeto</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+
+                <a href="https://github.com/mateusrabetti/MariaDB" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Repositório</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               PROJETO 3: FITNESS
+               ----------------------------------------------------------------- -->
+          <article class="project-card reveal-on-scroll" id="projeto-fitness">
+            <div class="project-media-column">
+              <div class="project-image-wrapper">
+                <img src="Assents/projects/fitness/preview.png" alt="Captura do dashboard Fitness desenvolvido por Mateus Rabetti" loading="lazy">
+
+                <button type="button" class="btn-expand-preview" title="Ampliar visualização">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Ampliar</span>
+                </button>
+
+                <div class="media-view-toggle">
+                  <button type="button" class="view-toggle-btn active" data-src="Assents/projects/fitness/preview.png">
+                    📊 Dashboard
+                  </button>
+                  <button type="button" class="view-toggle-btn" data-src="Assents/projects/fitness/mobile.png">
+                    📱 App Mobile
+                  </button>
+                  <button type="button" class="view-toggle-btn" data-src="Assents/projects/fitness/full.png">
+                    🔍 Visão Geral
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content-column">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-number">PROJETO 03</span>
+                  <span class="project-status-badge">Publicado &bull; Vercel</span>
+                </div>
+
+                <h3 class="project-name">Fitness</h3>
+
+                <p class="project-description">
+                  Aplicação e dashboard de acompanhamento de atividades físicas e condicionamento corporal. Conta com anel circular de progresso com porcentagem de conclusão, métricas em tempo real de calorias queimadas, frequência cardíaca (bpm) e tempo de treino ativo, além de filtros de categorias (Cardio, Weight, Muscle) e seção de exercícios populares.
+                </p>
+
+                <div class="project-tags">
+                  <span class="tag-item">UI/UX Mobile First</span>
+                  <span class="tag-item">Dark Mode</span>
+                  <span class="tag-item">Métricas em Tempo Real</span>
+                  <span class="tag-item">Dashboard Interativo</span>
+                  <span class="tag-item">Animação de Progresso</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://fitness-beta-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-visit">
+                  <span>Acessar Projeto</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+
+                <a href="https://github.com/mateusrabetti/fitness" target="_blank" rel="noopener noreferrer" class="btn-project-repo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Repositório</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SEÇÃO CONTATO
+         ========================================================================= -->
+    <section class="section-contact" id="contato">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Conecte-se Comigo</span>
+          <h2 class="section-title">Vamos Conversar?</h2>
+          <p class="section-subtitle">
+            Estou sempre aberto a novas oportunidades, colaborações em projetos de código aberto ou trocar ideias sobre tecnologia e desenvolvimento.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Coluna de Acesso Rápido -->
+          <div class="contact-info-column reveal-on-scroll">
+            <div class="contact-direct-card">
+              <div class="direct-card-main">
+                <div class="direct-card-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>
+                </div>
+                <div class="direct-card-text">
+                  <h4>GitHub Oficial</h4>
+                  <p>@mateusrabetti</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 8px;">
+                <button type="button" class="btn-copy-link" id="btn-copy-github" title="Copiar link do GitHub">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-text">Copiar Link</span>
+                </button>
+
+                <a href="https://github.com/mateusrabetti" target="_blank" rel="noopener noreferrer" class="btn-copy-link" title="Abrir perfil no GitHub">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Abrir</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="about-quote-box" style="margin-top: 0;">
+              <p class="about-quote-text" style="font-size: 0.925rem;">
+                "Nenhum dado de contato ou experiência profissional foi inventado neste site. Para outros canais diretos, sinta-se à vontade para me contatar através do meu GitHub."
+              </p>
+              <p class="about-quote-author">&mdash; Princípio de Autenticidade</p>
+            </div>
+          </div>
+
+          <!-- Formulário de Mensagem -->
+          <div class="contact-form-column reveal-on-scroll reveal-delay-2">
+            <div class="contact-form-card">
+              <h3 class="form-title">Enviar Mensagem</h3>
+              <p class="form-subtitle">Preencha os campos abaixo para iniciar um contato.</p>
+
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Seu Nome *</label>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="Ex: Ana Silva" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Seu E-mail *</label>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="Ex: ana@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Mensagem *</label>
+                  <textarea id="form-message" name="message" class="form-textarea" placeholder="Descreva brevemente sobre o que gostaria de conversar..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary btn-submit-form" id="btn-submit-contact">
+                  <span>Validar e Enviar</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+
+                <p id="form-status" style="display: none; margin-top: 16px; font-size: 0.85rem; line-height: 1.5;"></p>
+
+                <p class="form-note">
+                  &bull; <strong>Transparência técnica:</strong> O formulário valida os dados no navegador. Para disparo de e-mails em produção, integre facilmente a um endpoint como Formspree ou Resend.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       6. MODAL DE GALERIA AMPLIADA (PREVIEW DE PROJETOS)
+       ========================================================================= -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modal-project-title">Visualização do Projeto</h3>
+          <p id="modal-project-desc">Captura real da interface</p>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Fechar visualização">
+          &times;
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image-display">
+          <img id="modal-image" src="" alt="Visualização em alta resolução da interface do projeto">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modal-repo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 0.8125rem; padding: 8px 16px;">
+          <span>Ver Repositório</span>
+        </a>
+        <a id="modal-visit-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.8125rem; padding: 8px 16px;">
+          <span>Abrir Aplicação</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       7. RODAPÉ (FOOTER)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Mateus de Souza Silva Rabetti</h3>
+          <p>Desenvolvedor Web &bull; Portfólio Pessoal Oficial</p>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="https://github.com/mateusrabetti" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mateus Rabetti. Todos os direitos reservados.</p>
+        <p class="footer-tech-notice">Desenvolvido com HTML5, CSS3 &amp; JavaScript puro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Principal -->
+  <script src="js/script.js"></script>
+</body>
+</html>
